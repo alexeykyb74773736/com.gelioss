@@ -1,0 +1,10 @@
+import java.util.logging.Filter;
+import java.util.logging.Formatter;
+import java.util.logging.LogRecord;
+
+public class MyLogFormat extends Formatter {
+    @Override
+    public String format(LogRecord record) {
+        return "Hello World" \n"+record.getSourceMethodName();
+    }
+}
